@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Navegación Responsiva</title> 
+    <style> 
+        /* Estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Estilos de la barra de navegación */
+        .navbar {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar ul { 
+            list-style: none; 
+            padding: 1rem;
+            margin: 0; 
+            display: flex; 
+            background-color: rgb(99, 158, 164); 
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        } 
+
+        .navbar li { 
+            margin: 0.5rem;
+            transition: transform 0.3s ease;
+        } 
+
+        .navbar a { 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 4px; 
+            display: inline-block; 
+            color: rgb(178, 51, 12); 
+            padding: 0.8rem 1.2rem;
+            transition: all 0.3s ease;
+        } 
+
+        .navbar a:hover { 
+            background-color: rgb(106, 106, 179);
+            color: white;
+            transform: translateY(-2px);
+        } 
+
+        .navbar a:active { 
+            color: rgb(105, 25, 180); 
+            background-color: aqua; 
+        } 
+        /* Tablets pequeñas y móviles grandes (601px - 767px) */
+        @media (max-width: 767px) {
+            .navbar ul {
+                padding: 0.8rem;
+                gap: 0.8rem;
+            }
+
+            .navbar a {
+                font-size: 0.9rem;
+                padding: 0.7rem 1rem;
+            }
+        }
+
+        /* Móviles (<600px) */
+        @media (max-width: 600px) { 
+            .navbar ul { 
+                flex-direction: column; 
+                align-items: center;
+                padding: 0.5rem;
+            } 
+
+            .navbar li { 
+                margin: 0.3rem;
+                width: 100%;
+                text-align: center;
+            } 
+
+            .navbar a { 
+                width: 90%;
+                padding: 0.8rem;
+                font-size: 1rem;
+                margin: 0 auto;
+                display: block;
+            } 
+        } 
+
+        /* Móviles pequeños (<400px) */
+        @media (max-width: 400px) {
+            .navbar a {
+                width: 95%;
+                font-size: 0.9rem;
+                padding: 0.7rem;
+            }
+        }
+    </style> 
+</head> 
+<body> 
+    <nav class="navbar"> 
+        <ul> 
+            <li> 
+                <a href="https://aulas.itsmad.edu.ec/2023/login/index.php">Instituto cursos</a> 
+            </li> 
+            <li> 
+                <a href="https://colegio.funder.edu.ec/" target="_blank" rel="noopener">colegio</a> 
+            </li> 
+            <li> 
+                <a href="https://www.instagram.com/almacenestiaec/">almacenestiaec</a> 
+            </li> 
+            <li> 
+                <a href="https://www.artefacta.com/" target="_blank" rel="noopener">compra en artefactas</a> 
+            </li> 
+        </ul> 
+    </nav> 
+</body> 
+</html>

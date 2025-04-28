@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Caja con Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 3px solid #007acc;
+            background-color: #e6f2ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .slider {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #sliderValue {
+            font-weight: bold;
+            color: #007acc;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div id="text">Valor del slider: <span id="sliderValue">50</span></div>
+        <input type="range" min="0" max="100" value="50" class="slider" id="slider">
+    </div>
+
+    <script>
+        const slider = document.getElementById("slider");
+        const sliderValue = document.getElementById("sliderValue");
+
+        slider.addEventListener("input", function () {
+            sliderValue.textContent = slider.value;
+        });
+    </script>
+
+</body>
+</html>
